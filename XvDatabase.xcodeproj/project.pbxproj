@@ -8,12 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		962BB2061E76E5A100E025A2 /* XvDatabase.h in Headers */ = {isa = PBXBuildFile; fileRef = 962BB2041E76E5A100E025A2 /* XvDatabase.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		962BB2171E76E60500E025A2 /* XvDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 962BB2161E76E60500E025A2 /* XvDatabase.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		962BB2011E76E5A100E025A2 /* XvDatabase.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = XvDatabase.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		962BB2041E76E5A100E025A2 /* XvDatabase.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XvDatabase.h; sourceTree = "<group>"; };
 		962BB2051E76E5A100E025A2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		962BB2161E76E60500E025A2 /* XvDatabase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = XvDatabase.swift; path = XvDatabase/Public/XvDatabase.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -30,8 +32,8 @@
 		962BB1F71E76E5A100E025A2 = {
 			isa = PBXGroup;
 			children = (
-				962BB2031E76E5A100E025A2 /* XvDatabase */,
-				962BB2021E76E5A100E025A2 /* Products */,
+				962BB2161E76E60500E025A2 /* XvDatabase.swift */,
+				962BB2031E76E5A100E025A2 /* Private */,
 			);
 			sourceTree = "<group>";
 		};
@@ -41,14 +43,17 @@
 				962BB2011E76E5A100E025A2 /* XvDatabase.framework */,
 			);
 			name = Products;
+			path = ..;
 			sourceTree = "<group>";
 		};
-		962BB2031E76E5A100E025A2 /* XvDatabase */ = {
+		962BB2031E76E5A100E025A2 /* Private */ = {
 			isa = PBXGroup;
 			children = (
+				962BB2021E76E5A100E025A2 /* Products */,
 				962BB2041E76E5A100E025A2 /* XvDatabase.h */,
 				962BB2051E76E5A100E025A2 /* Info.plist */,
 			);
+			name = Private;
 			path = XvDatabase;
 			sourceTree = "<group>";
 		};
@@ -96,6 +101,7 @@
 					962BB2001E76E5A100E025A2 = {
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = LN2HJCURK9;
+						LastSwiftMigration = 0820;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -132,6 +138,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				962BB2171E76E60500E025A2 /* XvDatabase.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -240,6 +247,7 @@
 		962BB20A1E76E5A100E025A2 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = LN2HJCURK9;
@@ -248,10 +256,12 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = XvDatabase/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.jasonjsnell.XvDatabase;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -259,6 +269,7 @@
 		962BB20B1E76E5A100E025A2 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = LN2HJCURK9;
@@ -267,6 +278,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = XvDatabase/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.jasonjsnell.XvDatabase;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -294,6 +306,7 @@
 				962BB20B1E76E5A100E025A2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
