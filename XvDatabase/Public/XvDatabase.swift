@@ -184,18 +184,12 @@ public class XvDatabase {
     
     //transmits instrument note counts to the database on the server
     fileprivate func push(performanceData:[String]){
-        
-        print("1 data array", performanceData)
-        
+       
         //create a string of the values with hyphens in between
         let dataString:String = performanceData.joined(separator: "-")
         
-        print("2 data string", dataString)
-        
         //create POST string of data
         if let data:Data = String("UserTouchData=" + dataString).data(using: String.Encoding.utf8) {
-            
-            print("3 data ", dataString)
             
             //send to function that handles server uploads
             pushData(data, url: rootUrl + PUSH_PERFORMANCE_DATA_FILE){
