@@ -357,7 +357,7 @@ public class XvDatabase {
             let dataString = NSString(data: data!, encoding: String.Encoding.utf8.rawValue)
             
             if (self.debug){
-                print("DATABASE: SEND data response: \(dataString)")
+                print("DATABASE: SEND data response: \(String(describing: dataString))")
             }
             
             completion(dataString, nil)
