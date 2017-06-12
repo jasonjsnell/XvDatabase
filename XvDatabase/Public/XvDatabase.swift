@@ -158,12 +158,12 @@ public class XvDatabase {
     //when at threshold, push to server
     //note: this is the only publicly accessible function
     
-    public func record(instrument:Int, key:Int){
+    public func record(x:Int, y:Int){
         
         if (mode == MODE_PERFORMANCE){
             
             //create string with X Y coordinate data
-            let touchPosition:String = "X" + String(instrument) + "Y" + String(key)
+            let touchPosition:String = "X" + String(x) + "Y" + String(y)
             
             //add to array
             performanceData.append(touchPosition)
