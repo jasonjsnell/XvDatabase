@@ -20,7 +20,7 @@ public class XvDatabase {
     //MARK: MODE TYPES
     public let MODE_OFF = "OFF" // general, no collection
     public var MODE_SESSION = "SESSION" //session data only
-    public var MODE_PERFORMANCE = "PERFORMANCE" //all data, session and instrument
+    public var MODE_PERFORMANCE = "PERFORMANCE" //all data, session and track
     
     //MARK: FILE NAMES
     fileprivate var GET_MODE_FILE:String = "get_mode.php"
@@ -182,7 +182,7 @@ public class XvDatabase {
         
     }
     
-    //transmits instrument note counts to the database on the server
+    //transmits track note counts to the database on the server
     fileprivate func push(performanceData:[String]){
        
         //create a string of the values with hyphens in between
